@@ -7,6 +7,7 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
+    <button>Choose grid size</button>
     <div id="grid-container"></div>
     <style>
         #grid-container {
@@ -24,14 +25,20 @@
     </style>
     <script>
         const gridContainer = document.getElementById('grid-container');
+        const button = document.querySelector('button');
+        button.addEventListener('click', () => {
+        createGrid();
+    });
+    function createGrid() {
         for (let i = 0; i < 256; i++) {
         let newGrid = document.createElement('div');
         newGrid.classList.add('grid-item');
         gridContainer.appendChild(newGrid);
         newGrid.addEventListener('mouseover', () => {
         newGrid.style.backgroundColor = 'blue';
-    })
-    }
+        });
+    };
+};
     </script>
 </body>
 </html>
