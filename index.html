@@ -9,7 +9,18 @@
 <body>
     <div id="grid-container"></div>
     <style>
-        
+        #grid-container {
+            display: grid;
+            width: 800px;
+            height: 800px;
+            grid-template-columns: repeat(16, 50px);
+            /* grid-template-rows: repeat(16, 50px); */
+            border: 1px solid red;
+        }
+
+        .grid-item {
+            background-color: lightblue;
+        }
     </style>
     <script>
 
