@@ -30,16 +30,19 @@
         createGrid();
     });
     function createGrid() {
-        const userSelection = prompt("Choose a grid size");
+        const userSelection = prompt("Choose a grid size from 1-100");
         let squareSize = (parseInt("800px".replace(/px/,""))/userSelection)+"px";
         const gridArea = userSelection * userSelection;
         for (let i = 0; i < gridArea; i++) {
-        let newGrid = document.createElement('div');
-        newGrid.classList.add('grid-item');
-        gridContainer.appendChild(newGrid);
-        newGrid.addEventListener('mouseover', () => {
-        newGrid.style.backgroundColor = 'blue';
-        });
+            if (gridArea > 10000) {
+                return createGrid();
+            } else if (gridArea <= 10000) {
+                let newGrid = document.createElement('div');
+                newGrid.classList.add('grid-item');
+                gridContainer.appendChild(newGrid);
+                newGrid.addEventListener('mouseover', () => {
+                newGrid.style.backgroundColor = 'blue';
+        })};
     };
         gridContainer.style.gridTemplateColumns = `repeat(${userSelection}, ${squareSize}`;
 };
