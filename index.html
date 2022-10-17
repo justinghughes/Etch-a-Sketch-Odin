@@ -27,11 +27,11 @@
         const gridContainer = document.getElementById('grid-container');
         const button = document.querySelector('button');
         button.addEventListener('click', () => {
-        const userSelection = prompt("Choose a grid size");
         createGrid();
     });
     function createGrid() {
-        for (let i = 0; i < 256; i++) {
+        const userSelection = prompt("Choose a grid size");
+        for (let i = 0; i < userSelection; i++) {
         let newGrid = document.createElement('div');
         newGrid.classList.add('grid-item');
         gridContainer.appendChild(newGrid);
