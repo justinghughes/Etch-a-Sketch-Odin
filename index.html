@@ -28,6 +28,9 @@
         let newGrid = document.createElement('div');
         newGrid.classList.add('grid-item');
         gridContainer.appendChild(newGrid);
+        newGrid.addEventListener('mouseover', () => {
+        newGrid.style.backgroundColor = 'blue';
+    })
     }
     </script>
 </body>
