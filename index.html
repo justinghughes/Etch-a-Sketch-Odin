@@ -5,57 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <button>Choose grid size</button>
     <button id="reset">Reset</button>
     <div id="grid-container"></div>
-    <style>
-        #grid-container {
-            display: grid;
-            width: 800px;
-            height: 800px;
-            grid-template-columns: repeat(16, 50px);
-            /* grid-template-rows: repeat(16, 50px); */
-            border: 1px solid red;
-        }
-
-        .grid-item {
-            background-color: lightblue;
-        }
-    </style>
-    <script>
-        const gridContainer = document.getElementById('grid-container');
-        const button = document.querySelector('button');
-        button.addEventListener('click', () => {
-        createGrid();
-    });
-        const resetBtn = document.querySelector('#reset');
-        resetBtn.addEventListener('click', () => {
-            clearGrid();
-        });
-
-        function clearGrid() {
-            gridContainer.innerHTML = '';
-        }
-
-    function createGrid() {
-        const userSelection = prompt("Choose a grid size from 1-100");
-        let squareSize = (parseInt("800px".replace(/px/,""))/userSelection)+"px";
-        const gridArea = userSelection * userSelection;
-        for (let i = 0; i < gridArea; i++) {
-            if (gridArea > 10000) {
-                return createGrid();
-            } else if (gridArea <= 10000) {
-                let newGrid = document.createElement('div');
-                newGrid.classList.add('grid-item');
-                gridContainer.appendChild(newGrid);
-                newGrid.addEventListener('mouseover', () => {
-                newGrid.style.backgroundColor = 'blue';
-        })};
-    };
-        gridContainer.style.gridTemplateColumns = `repeat(${userSelection}, ${squareSize}`;
-};
-    </script>
 </body>
 </html>
