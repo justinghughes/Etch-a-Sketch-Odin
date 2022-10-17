@@ -8,6 +8,7 @@
 </head>
 <body>
     <button>Choose grid size</button>
+    <button id="reset">Reset</button>
     <div id="grid-container"></div>
     <style>
         #grid-container {
@@ -29,6 +30,15 @@
         button.addEventListener('click', () => {
         createGrid();
     });
+        const resetBtn = document.querySelector('#reset');
+        resetBtn.addEventListener('click', () => {
+            clearGrid();
+        });
+
+        function clearGrid() {
+            gridContainer.innerHTML = '';
+        }
+
     function createGrid() {
         const userSelection = prompt("Choose a grid size from 1-100");
         let squareSize = (parseInt("800px".replace(/px/,""))/userSelection)+"px";
