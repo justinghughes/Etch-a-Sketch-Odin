@@ -10,15 +10,17 @@
 </head>
 <body>
     <div id="artboard">
+        <h1 class="title">Etch-a-Sketch</h1>
+        <h3 class="title">By: Justin Hughes</h3>
         <div class="buttons">
-            <button>Choose grid size</button>
+            <button class="btn">Choose grid size</button>
             <label for="colors"></label>
-                <select name="colors" id="colors">
+                <select class="btn" name="colors" id="colors">
                     <option value="placeholder">Choose Color</option>
                     <option id="red-select" value="red" onclick="thisIsRed()">Red</option>
                     <option id="blue-select" value="blue" onclick="thisIsBlue()">Blue</option>
                 </select>
-            <button id="reset">Reset</button>
+            <button class="btn" id="reset">Reset</button>
         </div>
         <div id="grid-container"></div>
     </div>
