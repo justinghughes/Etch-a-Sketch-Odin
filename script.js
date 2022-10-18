@@ -2,6 +2,7 @@ const gridContainer = document.getElementById('grid-container');
 const button = document.querySelector('button');
 const colorSelector = document.getElementById('colors');
 button.addEventListener('click', () => {
+        gridContainer.innerHTML = '';
         createGrid();
     });
         const resetBtn = document.querySelector('#reset');
@@ -16,6 +17,11 @@ button.addEventListener('click', () => {
         const redBtn = document.querySelector('#red');
         const blueBtn = document.querySelector('#blue');
 
+        for (let i = 0; i < 256; i++) {
+        let newGrid = document.createElement('div');
+                newGrid.classList.add('grid-item');
+                gridContainer.appendChild(newGrid);
+        }
     function createGrid() {
         const userSelection = prompt("Choose a grid size from 1-100");
         let squareSize = (parseInt("800px".replace(/px/,""))/userSelection)+"px";
