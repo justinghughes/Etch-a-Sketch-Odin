@@ -29,7 +29,9 @@ button.addEventListener('click', () => {
                 gridContainer.appendChild(newGrid);
 
                 colorSelector.addEventListener('change', function() {
-                    if (this.value == "red") {
+                    if (this.value == "placeholder") {
+                        return null;
+                    } else if (this.value == "red") {
                         redGrid();
                     } else {
                         blueGrid();
@@ -48,16 +50,3 @@ button.addEventListener('click', () => {
                     
             gridContainer.style.gridTemplateColumns = `repeat(${userSelection}, ${squareSize}`;
             };
-
-
-
-
-
-
-// redSelection.addEventListener('click', () => {
-//     console.log("Red")
-// });
-
-// blueSelection.addEventListener('click', () => {
-//     console.log("Blue")
-// });

@@ -10,13 +10,12 @@
 </head>
 <body>
     <button>Choose grid size</button>
-    <label for="colors">Choose a color</label>
+    <label for="colors"></label>
         <select name="colors" id="colors">
+            <option value="placeholder">Choose Color</option>
             <option id="red-select" value="red" onclick="thisIsRed()">Red</option>
             <option id="blue-select" value="blue" onclick="thisIsBlue()">Blue</option>
         </select>
-    <button id="red">Red</button>
-    <button id="blue">Blue</button>
     <button id="reset">Reset</button>
     <div id="grid-container"></div>
 </body>
