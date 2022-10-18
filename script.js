@@ -24,7 +24,7 @@ button.addEventListener('click', () => {
         }
     function createGrid() {
         const userSelection = prompt("Choose a grid size from 1-100");
-        let squareSize = (parseInt("800px".replace(/px/,""))/userSelection)+"px";
+        let squareSize = (parseInt("700px".replace(/px/,""))/userSelection)+"px";
         const gridArea = userSelection * userSelection;
         for (let i = 0; i < gridArea; i++) {
             if (gridArea > 10000) {

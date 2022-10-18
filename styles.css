@@ -1,12 +1,37 @@
+body {
+    margin: 0;
+    background-color: rgb(32, 32, 32);
+}
+#artboard {
+    margin: auto;
+
+    padding-top: 150px;
+    height: 850px;
+    width: 850px;
+    background-color: rgb(53, 53, 53);
+}
+
+.buttons {
+    display: flex;
+    margin: -40px;
+    justify-content: center;
+    gap: 25px;
+}
+
 #grid-container {
     display: grid;
-    width: 800px;
-    height: 800px;
-    grid-template-columns: repeat(16, 50px);
+    margin: auto;
+    margin-top: 50px;
+    width: 700px;
+    height: 700px;
+    grid-template-columns: repeat(16, 43.75px);
     /* grid-template-rows: repeat(16, 50px); */
-    border: 1px solid red;
+    border: 1px solid grey;
+    background-color: white;
 }
 
 .grid-item {
-    background-color: lightblue;
+    background-color: white;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
 }
