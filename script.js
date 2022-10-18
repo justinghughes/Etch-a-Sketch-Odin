@@ -11,17 +11,24 @@ button.addEventListener('click', () => {
         });
 
         function clearGrid() {
-            gridContainer.innerHTML = '';
-        }
+            gridContainer.style.gridTemplateColumns = null;
+            createDefaultGrid();
+            }
+        
+        
 
         const redBtn = document.querySelector('#red');
         const blueBtn = document.querySelector('#blue');
 
+    function createDefaultGrid() {
+        gridContainer.innerHTML = '';
         for (let i = 0; i < 256; i++) {
         let newGrid = document.createElement('div');
                 newGrid.classList.add('grid-item');
                 gridContainer.appendChild(newGrid);
         }
+    }
+    createDefaultGrid()
     function createGrid() {
         const userSelection = prompt("Choose a grid size from 1-100");
         let squareSize = (parseInt("700px".replace(/px/,""))/userSelection)+"px";
